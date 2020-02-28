@@ -1,0 +1,10 @@
+body {
+	background-color: white;
+	margin: 0 auto;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+p {
+	padding-bottom: 5px;
+}

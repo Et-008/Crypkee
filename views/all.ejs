@@ -1,0 +1,27 @@
+<%- include ('header.html') %>
+
+
+<div class="row d-flex">
+	<div class="col-sm-3"><p><strong>Name</strong></p></div>
+	<div class="col-sm-2"><p><strong>Symbol</strong></p></div>
+	<div class="col-sm-3"><p><strong>Price USD</strong></p></div>
+	<div class="col-sm-2"><p><strong>ID</strong></p></div>
+	<div class="col-sm-2"></div>
+</div>
+
+
+
+	<% var i = 0 %>
+<% Body.forEach(function(crc) { %>
+<% i += 1 %>
+	<div class="row d-flex">
+		<div class="col-sm-3"><p><%=crc.name%></p></div>
+		<div class="col-sm-2"><p><%=crc.symbol%></p></div>
+		<div class="col-sm-3"><p><%=crc.quote.USD.price%></p></div>
+		<div class="col-sm-2"><p><%=crc.id%></p></div>
+		<div class="col-sm-2"><p><a href="http://localhost:3000/<%= crc.slug %>" class='btn btn-dark btn-sm'>click here</a></p></div>
+	</div>
+<% }) %>
+
+
+<%- include ('footer.html') %>
