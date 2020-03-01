@@ -22,7 +22,7 @@ const requestOptions = {
 
 
 
-app.use(express.static(__dirname + 'view'));
+app.use(express.static(__dirname + 'views'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.get('/', function (req, res) {
 	rp(requestOptions).then(response => {
